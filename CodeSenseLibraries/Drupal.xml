@@ -1,0 +1,6166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<codesense version="1.0"> 
+  <!-- Drupal API -->
+  <set name="be.sken.identifier.function">
+    <behavior>
+      <append-dynamic>
+        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+        <transform-into>(${1:arguments})</transform-into>
+      </append-dynamic>
+    </behavior>
+    
+    <!--  General system functions  -->    
+    <completion string="_element_info">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$type}, ${2:\$refresh = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="_mime_header_decode">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$matches})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="confirm_form">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$form}, ${2:\$question}, ${3:\$path}${4:, ${5:\$description = NULL}, ${6:\$yes = NULL}, ${7:\$no = NULL}, ${1:\$name = 'confirm'}})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="conf_path">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$require_settings = TRUE}, ${2:\$reset = FALSE})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="decode_entities">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$text}, ${2:\$exclude = array()})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="element_child">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$key})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="element_children">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$element})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="element_properties">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$element})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="element_property">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$key})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="element_sort">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$a}, ${2:\$b})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="fix_gpc_magic">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="flood_is_allowed">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$name}, ${2:\$threshold})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="flood_register_event">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$name})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="ip_address">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="map_month">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$month})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="mime_header_decode">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$header})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="mime_header_encode">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$string})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="page_get_cache">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$status_only = FALSE})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="page_set_cache">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="parse_size">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$size})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="referer_uri">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="request_uri">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="throttle_status">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="timer_read">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$name})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="timer_start">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$name})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="timer_stop">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$name})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="truncate_utf8">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$string}, ${2:\$len}, ${3:\$wordsafe = FALSE}, ${4:\$dots = FALSE})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="unicode_check">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="unicode_requirements">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="valid_email_address">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$mail})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="valid_url">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$url}, ${2:\$absolute = FALSE})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="variable_del">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$name})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="variable_get">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$name}, ${2:\$default = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="variable_init">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$conf = array()})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="variable_set">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$name}, ${2:\$value})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="watchdog">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$type}, ${2:\$message}, ${3:\$variables = array()}, ${4:\$severity = WATCHDOG_NOTICE}, ${5:\$link = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="watchdog_severity_levels">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    
+    <!--  Actions API  -->
+    <completion string="actions_actions_map">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$actions})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="actions_delete">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$aid})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="actions_do">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$action_ids}, ${2:&amp;\$object}${3:, ${4:\$context = NULL}, ${5:\$a1 = NULL}, ${6:\$a2 = NULL}})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="actions_function_lookup">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$hash})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="actions_get_all_actions">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="actions_list">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$reset = FALSE})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="actions_load">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$aid})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="actions_save">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$function}, ${2:\$type}, ${3:\$params}, ${4:\$desc}${5:, \$aid = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="actions_synchronize">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$actions_in_code = array()}, ${2:\$delete_orphans = FALSE})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    
+    <!--  Aggregator API  -->    
+    <completion string="_aggregator_has_categories">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+      
+    <completion string="_aggregator_items">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$count})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+      
+    <completion string="_aggregator_page_list">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$items}, ${2:\$op}, ${3:\$feed_source = ''})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+      
+    <completion string="aggregator_category_load">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$cid})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+      
+    <completion string="aggregator_element_data">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$parser}, ${2:\$data})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+      
+    <completion string="aggregator_element_end">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$parser}, ${2:\$name})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+      
+    <completion string="aggregator_element_start">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$parser}, ${2:\$name}, ${3:\$attributes})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+      
+    <completion string="aggregator_feed_items_load">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$sql})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+      
+    <completion string="aggregator_feed_load">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$fid})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+      
+    <completion string="aggregator_filter_xss">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$value})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+      
+    <completion string="aggregator_parse_feed">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$data}, ${2:\$feed})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+      
+    <completion string="aggregator_parse_w3cdtf">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$date_str})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+      
+    <completion string="aggregator_refresh">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$feed})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="aggregator_remove">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$feed})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    
+    <!--  Batch API  -->    
+    <completion string="_batch_page">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="batch_get">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="batch_process">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$redirect = NULL}, ${2:\$url = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="batch_set">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$batch_definition})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    
+    <!--  Block API  -->    
+    <completion string="_block_compare">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$a}, ${2:\$b})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+        
+    <completion string="_block_get_cache_id">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$block})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+        
+    <completion string="_block_rehash">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+     
+    <completion string="block_box_get">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$bid})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="block_list">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$region})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    
+    <!--  Blogapi API  -->    
+    <completion string="_blogapi_get_node_types">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+            
+    <completion string="_blogapi_get_post">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$node}, ${2:\$bodies = TRUE})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+            
+    <completion string="_blogapi_space_used">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$uid})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+            
+    <completion string="_blogapi_validate_blogid">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$blogid})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+            
+    <completion string="_blog_post_exists">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$account})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+        
+    <completion string="blogapi_blogger_delete_post">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$appkey}, ${2:\$postid}, ${3:\$username}, ${4:\$password}, ${5:\$publish})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="blogapi_blogger_edit_post">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$appkey}, ${2:\$postid}, ${3:\$username}, ${4:\$password}, ${5:\$content}, ${6:\$publish})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="blogapi_blogger_get_post">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$appkey}, ${2:\$postid}, ${3:\$username}, ${4:\$password})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="blogapi_blogger_get_recent_posts">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$appkey}, ${2:\$blogid}, ${3:\$username}, ${4:\$password}, ${5:\$number_of_posts}, ${6:\$bodies = TRUE})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="blogapi_blogger_get_users_blogs">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$appid}, ${2:\$username}, ${3:\$password})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="blogapi_blogger_get_user_info">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$appkey}, ${2:\$username}, ${3:\$password})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="blogapi_blogger_new_post">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$appkey}, ${2:\$blogid}, ${3:\$username}, ${4:\$password}, ${5:\$content}, ${6:\$publish})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="blogapi_blogger_title">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$contents})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="blogapi_error">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$message})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="blogapi_metaweblog_get_category_list">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$blogid}, ${2:\$username}, ${3:\$password})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="blogapi_metaweblog_new_media_object">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$blogid}, ${2:\$username}, ${3:\$password}, ${4:\$file})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="blogapi_mt_get_post_categories">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$postid}, ${2:\$username}, ${3:\$password})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="blogapi_mt_publish_post">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$postid}, ${2:\$username}, ${3:\$password})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="blogapi_mt_set_post_categories">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$postid}, ${2:\$username}, ${3:\$password}, ${4:\$categories})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="blogapi_mt_supported_text_filters">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="blogapi_mt_validate_terms">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$node})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="blogapi_status_error_check">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$node}, ${2:\$original_status})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="blogapi_validate_user">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$username}, ${2:\$password})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    
+    <!--  Book API  -->    
+    <completion string="_book_link_defaults">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$nid})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>     
+    
+    <completion string="_book_parent_depth_limit">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$book_link})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>    
+    
+    <completion string="_book_parent_select">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$book_link})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>  
+    
+    <completion string="_book_update_outline">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$node})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>  
+    
+    <completion string="book_build_active_trail">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$book_link})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>  
+      
+    <completion string="book_children">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$book_link})</transform-into>
+        </append-static>
+      </behavior>
+    </completion> 
+      
+    <completion string="book_get_books">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+      
+    <completion string="book_get_flat_menu">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$book_link})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+      
+    <completion string="book_next">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$book_link})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+      
+    <completion string="book_outline">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$node})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+      
+    <completion string="book_prev">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$book_link})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+      
+    <completion string="book_render">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="book_toc">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$bid}, ${2:\$exclude = array()}, ${3:\$depth_limit})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+      
+    <completion string="book_type_is_allowed">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$type})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+      
+    <completion string="book_update_bid">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$book_link})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    
+    <!--  Cache API  -->    
+    <completion string="cache_clear_all">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$cid = NULL}, ${2:\$table = NULL}, ${3:\$wildcard = FALSE})</transform-into>
+        </append-static>
+      </behavior>
+    </completion> 
+    
+    <completion string="cache_get">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$cid}, ${2:\$table = 'cache'})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>  
+     
+    <completion string="cache_set">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$cid}, ${2:\$data}, ${3:\$table = 'cache'}, ${4:\$expire = CACHE_PERMANENT}, ${5:\$headers = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    
+    <!--  Color API  -->    
+    <completion string="_color_blend">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$img}, ${2:\$hex1}, ${3:\$hex2}, ${4:\$alpha})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="_color_gd">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$img}, ${2:\$hex})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="_color_hsl2rgb">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$hsl})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="_color_hue2rgb">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$m1}, ${2:\$m2}, ${3:\$h})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="_color_pack">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$rgb}, ${2:\$normalize = false})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="_color_rgb2hsl">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$rgb})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="_color_shift">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$given}, ${2:\$ref1}, ${3:\$ref2}, ${4:\$target})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="_color_unpack">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$hex}, ${2:\$normalize = false})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="color_get_info">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$theme})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="color_get_palette">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$theme}, ${2:\$default = false})</transform-into>
+        </append-static>
+      </behavior>
+    </completion> 
+    
+    
+    <!--  Comment API  -->    
+    <completion string="_comment_delete_thread">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$comment})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+          
+    <completion string="_comment_get_display_setting">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$setting}, ${2:\$node})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+          
+    <completion string="_comment_get_modes">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+          
+    <completion string="_comment_get_orders">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+           
+    <completion string="_comment_load">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$cid})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+          
+    <completion string="_comment_per_page">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+          
+    <completion string="comment_access">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$op}, ${2:\$comment})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="comment_get_recent">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$number = 10})</transform-into>
+        </append-static>
+      </behavior>
+    </completion> 
+    
+    <completion string="comment_links">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$comment}, ${2:\$return = 1})</transform-into>
+        </append-static>
+      </behavior>
+    </completion> 
+    
+    <completion string="comment_num_all">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$nid})</transform-into>
+        </append-static>
+      </behavior>
+    </completion> 
+    
+    <completion string="comment_num_new">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$nid}, ${2:\$timestamp = 0})</transform-into>
+        </append-static>
+      </behavior>
+    </completion> 
+    
+    <completion string="comment_num_replies">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$pid})</transform-into>
+        </append-static>
+      </behavior>
+    </completion> 
+    
+    <completion string="comment_render">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$node}, ${2:\$cid = 0})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="comment_save">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$edit})</transform-into>
+        </append-static>
+      </behavior>
+    </completion> 
+    
+    <completion string="comment_validate">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$edit})</transform-into>
+        </append-static>
+      </behavior>
+    </completion> 
+    
+    
+    <!--  Database Layer -->    
+    <completion string="_dblog_format_message">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$dblog})</transform-into>
+        </append-static>
+      </behavior>
+    </completion> 
+    
+    <completion string="_dblog_get_message_types">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion> 
+    
+    <completion string="db_add_column">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$ret}, ${2:\$table}, ${3:\$column}, ${4:\$type}, ${5:\$attributes = array()})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="db_add_field">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$ret}, ${2:\$table}, ${3:\$field}, ${4:\$new_keys = array()})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="db_add_index">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$ret}, ${2:\$table}, ${3:\$name}, ${4:\$fields})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="db_add_primary_key">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$ret}, ${2:\$table}, ${3:\$fields})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="db_add_unique_key">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$ret}, ${2:\$table}, ${3:\$name}, ${4:\$fields})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="db_affected_rows">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+      
+    <completion string="db_change_column">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$ret}, ${2:\$table}, ${3:\$column}, ${4:\$column_new}, ${5:\$type}, ${6:\$attributes = array()})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="db_change_field">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$ret}, ${2:\$table}, ${3:\$field}, ${4:\$field_new}, ${5:\$spec}, ${6:\$new_keys = array()})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="db_check_setup">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="db_column_exists">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$table}, ${2:\$column})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="db_connect">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$url})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="db_create_table">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$ret}, ${2:\$name}, ${3:\$table})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="db_create_table_sql">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$name}, ${2:\$table})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="db_decode_blob">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$data})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="db_distinct_field">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$table}, ${2:\$field}, ${3:\$query})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="db_drop_field">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$ret}, ${2:\$table}, ${3:\$field})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="db_drop_index">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$ret}, ${2:\$table}, ${3:\$name})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="db_drop_primary_key">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$ret}, ${2:\$table})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="db_drop_table">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$ret}, ${2:\$table})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="db_drop_unique_key">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$ret}, ${2:\$table}, ${3:\$name})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="db_encode_blob">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$data})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="db_error">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="db_escape_string">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$text})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="db_escape_table">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$string})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="db_fetch_array">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$result})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="db_fetch_object">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$result})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="db_field_names">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$fields})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="db_field_set_default">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$ret}, ${2:\$table}, ${3:\$field}, ${4:\$default})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="db_field_set_no_default">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$ret}, ${2:\$table}, ${3:\$field})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="db_is_active">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="db_last_insert_id">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$table}, ${2:\$field})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="db_lock_table">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$table})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="db_placeholders">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$arguments}${2: ,${3:\$type = 'int'}})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="db_prefix_tables">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$sql})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="db_query">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$query})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="db_query_range">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$query})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="db_query_temporary">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$query})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="db_rename_table">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$ret}, ${2:\$table}, ${3:\$new_name})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="db_result">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$result})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="db_set_active">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$name = 'default'})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="db_status_report">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="db_table_exists">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$table})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="db_type_map">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="db_type_placeholder">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$type})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="db_unlock_tables">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="db_version">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="mysqli_is_available">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="mysql_is_available">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="pager_get_querystring">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="pager_load_array">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$value}, ${2:\$element}, ${3:\$old_array})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="pager_query">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$query}, ${2:\$limit = 10}, ${3:\$element = 0}, ${4:\$count_query = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="pgsql_is_available">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    
+    <!--  Drupal functions -->    
+    <completion string="_drupal_install_module">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$module})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+     
+    <completion string="_drupal_load_stylesheet">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$matches})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_access_denied">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_add_css">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$path = NULL}, ${2:\$type = 'module'}, ${3:\$media = 'all'}, ${4:\$preprocess = TRUE})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_add_feed">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$url = NULL}, ${2:\$title = 'module'})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_add_js">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$data = NULL}, ${2:\$type = 'module'}, ${3:\$scope = 'header'}, ${4:\$defer = FALSE}, ${5:\$cache = TRUE}, ${6:\$preprocess = TRUE})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_add_link">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$attributes = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_add_tabledrag">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$table_id}, ${2:\$action}, ${3:\$relationship}, ${4:\$group}, ${5:\$subgroup = NULL}, ${6:\$source = NULL}, ${7:\$hidden = TRUE}, ${8:\$limit = 0})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_alter">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$type}, ${2:&amp;\$data})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_anonymous_user">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$session = ''})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_attributes">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$attributes = array()})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_bootstrap">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$phase})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_build_css_cache">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$types}, ${2:\$filename})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_build_js_cache">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$types}, ${2:\$filename})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_check_module">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$module})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_check_profile">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$profile})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_clear_css_cache">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_clear_js_cache">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_clear_path_cache">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_clone">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$object})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_common_theme">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_convert_to_utf8">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$data}, ${2:\$encoding})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_cron_cleanup">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_cron_run">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_detect_baseurl">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$file = 'install.php'})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_detect_database_types">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_discover_template">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$paths}, ${2:\$suggestions}, ${3:\$extension = '.tpl.php'})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_error_handler">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$errno}, ${2:\$message}, ${3:\$filename}, ${4:\$line}, ${4:\$context})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_eval">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$code})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_execute">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$form_id}, ${2:&amp;\$form_state})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_explode_tags">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$tags})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_final_markup">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$content})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_find_theme_functions">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$cache}, ${2:\$prefixes})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_find_theme_templates">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$cache}, ${2:\$extension}, ${3:\$path})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_flush_all_caches">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_get_breadcrumb">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_get_content">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$region = NULL}, ${2:\$delimiter = ''})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_get_css">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$css = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_get_destination">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_get_feeds">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$delimiter = "\\n"})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_get_filename">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$type}, ${2:\$name}, ${3:\$filename = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_get_form">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$form_id})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_get_headers">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_get_html_head">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_get_installed_schema_version">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$module}, ${2:\$reset = FALSE}, ${3:\$array = FALSE})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_get_install_files">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$module_list = array()})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_get_js">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$scope = 'header'}, ${2:\$javascript = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_get_messages">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$type = NULL}, ${2:\$clear_queue = TRUE})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_get_normal_path">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$path}, ${2:\$path_language = ''})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_get_path">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$type}, ${2:\$name})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_get_private_key">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_get_schema">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$table = NULL}, ${2:\$rebuild = FALSE})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_get_schema_unprocessed">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$module}, ${2:\$table = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_get_schema_versions">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$module})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_get_title">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_get_token">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$value = ''})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_goto">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$path = ''}, ${2:\$query = NULL}, ${3:\$fragment = NULL}, ${4:\$http_response_code = 302})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_html_to_text">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$string}, ${2:\$allowed_tags = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_http_request">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$url}, ${2:\$headers = array()}, ${3:\$method = 'GET'}, ${4:\$data = NULL}, ${5:\$retry = 3})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_implode_tags">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$tags})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_init_language">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_init_path">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_install_fix_file">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$file}, ${2:\$mask}, ${3:\$message = TRUE})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_install_mkdir">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$file}, ${2:\$mask}, ${3:\$message = TRUE})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_install_modules">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$module_list = array()})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_install_profile_name">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_install_schema">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$module})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_install_system">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_is_denied">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$type}, ${2:\$mask})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_is_front_page">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_json">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$var = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_load">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$type}, ${2:\$name})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_load_stylesheet">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$file}, ${2:\$optimize = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_load_updates">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_lookup_path">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$action}, ${2:\$path = ''}, ${3:\$path_language = ''})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_mail">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$module}, ${2:\$key}, ${3:\$to}, ${4:\$language}, ${5:\$params = array()}, ${6:\$from = NULL}, ${7:\$send = TRUE})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_mail_send">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$message})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_maintenance_theme">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_map_assoc">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$array}, ${2:\$function = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_match_path">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$path}, ${2:\$patterns})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_not_found">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_page_cache_header">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$cache})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_page_footer">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_page_header">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_page_cache_header">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$filename})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_prepare_form">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$form_id}, ${2:&amp;\$form}, ${3:&amp;\$form_state})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_process_form">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$form_id}, ${2:&amp;\$form}, ${3:&amp;\$form_state})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_query_string_encode">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$query}, ${2:\$exclude = array()}, ${3:\$parent = ''})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_rebuild_form">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$form_id}, ${2:&amp;\$form_state}, ${3:\$args}, ${4:\$form_build_id = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_rebuild_theme_registry">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_redirect_form">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$form}, ${2:\$redirect = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_render">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$elements})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_render_form">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$form_id}, ${2:&amp;\$form})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_retrieve_form">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$form_id}, ${2:&amp;\$form_state})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_rewrite_settings">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$settings = array()}, ${2:\$prefix = ''})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_schema_fields_sql">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$table}, ${2:\$prefix = ''})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_set_breadcrumb">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$breadcrumb = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_set_content">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$region = NULL}, ${2:\$data = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_set_header">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$header = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_set_html_head">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$data = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_set_message">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$message = NULL}, ${2:\$type = ${3:'status|warning|error'}}, ${4:\$repeat = TRUE})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_set_title">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$title = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_site_offline">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_strlen">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$text})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_strtolower">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$text})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_strtoupper">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$text})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_substr">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$text}, ${2:\$start}, ${3:\$length = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_system_listing">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$mask}, ${2:\$directory}, ${3:\$key = 'name'}, ${4:\min_depth = 1})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_test_mysql">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$url}, ${2:&amp;\$success})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_test_mysqli">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$url}, ${2:&amp;\$success})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_test_pgsql">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$url}, ${2:&amp;\$success})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_to_js">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$var})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_truncate_bytes">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$string}, ${2:\$len})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_ucfirst">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$text})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_uninstall_module">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$module})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_uninstall_schema">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$module})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_unpack">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$obj}, ${2:\$field = 'data'})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_unset_globals">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_urlencode">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$text})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_validate_form">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$form_id}, ${2:\$form}, ${3:&amp;\$form_state})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_validate_utf8">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$text})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_valid_http_host">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$host})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_valid_token">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$token}, ${2:\$value = ''}, ${3:\$skip_anonymous = FALSE})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_verify_install_file">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$file}, ${2:\$mask = NULL}, ${3:\$type = 'file'})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_verify_profile">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$profile}, ${2:\$locale})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_wrap_mail">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$text}, ${2:\$indent = ''})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_write_record">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$table}, ${2:&amp;\$object}, ${3:\$update = array()})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="drupal_xml_parser_create">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$data})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    
+    <!--  File systems  -->  
+    <completion string="check_file">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:filename})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>  
+    
+    <completion string="file_check_directory">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$directory}, ${2:\$mode = 0}, ${3:\$form_item = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="file_check_location">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$source}, ${2:\$directory = ''})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="file_check_path">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$path})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+      
+    <completion string="file_copy">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$source}, ${2:\$dest = 0}, ${3:\$replace = FILE_EXISTS_RENAME|FILE_EXISTS_REPLACE|FILE_EXISTS_ERROR})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="file_create_filename">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$basename}, ${2:\$directory})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="file_create_path">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$dest = 0})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="file_create_url">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$path})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="file_delete">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$path})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="file_destination">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$destination}, ${2:\$replace = FILE_EXISTS_RENAME|FILE_EXISTS_REPLACE|FILE_EXISTS_ERROR})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="file_directory_path">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="file_directory_temp">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="file_download">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="file_get_mimetype">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$filename}, ${2:\$mapping = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+      
+    <completion string="file_move">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$source}, ${2:\$dest = 0}, ${3:\$replace = FILE_EXISTS_RENAME|FILE_EXISTS_REPLACE|FILE_EXISTS_ERROR})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+      
+    <completion string="file_munge_filename">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$filename}, ${2:\$extensions}, ${3:\$alerts = TRUE})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+      
+    <completion string="file_save_data">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$data}, ${2:\$dest}, ${3:\$replace = FILE_EXISTS_RENAME|FILE_EXISTS_REPLACE|FILE_EXISTS_ERROR})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+      
+    <completion string="file_save_upload">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$source}, ${2:\$validators = array()}, ${3:\$dest = FALSE}, ${4:\$replace = FILE_EXISTS_RENAME|FILE_EXISTS_REPLACE|FILE_EXISTS_ERROR})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+      
+    <completion string="file_scan_directory">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$dir}, ${2:\$mask}, ${3:\$nomask = array('.', '..', 'CVS')}, ${4:\$callback = 0}, ${5:\$recurse = TRUE}, ${6:\$key = 'filename'}, ${7:\$min_depth = 0}, ${8:\$depth = 0})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="file_set_status">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$file}, ${2:\$status})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="file_space_used">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$uid = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="file_transfer">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$source}, ${2:\$headers})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="file_unmunge_filename">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$filename})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="file_upload_max_size">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="file_validate_extensions">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$file}, ${2:\$extensions})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+      
+    <completion string="file_validate_image_resolution">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$file}, ${2:\$maximum_dimensions = 0}, ${3:\$minimum_dimensions = 0})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="file_validate_is_image">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$file})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="file_validate_name_length">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$file})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+      
+    <completion string="file_validate_size">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$file}, ${2:\$file_limit = 0}, ${3:\$user_limit = 0})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    
+    <!--  Filter systems  --> 
+    <completion string="_filter_autop">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$text})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>   
+    
+    <completion string="_filter_html">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$text}, ${2:\$format})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>   
+    
+    <completion string="_filter_htmlcorrector">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$text})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>  
+    
+    <completion string="_filter_tips">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$format}, ${2:\$long = FALSE})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>  
+    
+    <completion string="_filter_url">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$text}, ${2:\$format})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>  
+    
+    <completion string="_filter_url_parse_full_links">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$match})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>  
+    
+    <completion string="_filter_url_parse_partial_links">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$match})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>  
+    
+    <completion string="_filter_url_trim">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$text}, ${2:\$length = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion> 
+    
+    <completion string="_filter_xss_attributes">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$attr})</transform-into>
+        </append-static>
+      </behavior>
+    </completion> 
+    
+    <completion string="_filter_xss_split">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$m}, ${2:\$store = FALSE})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>  
+    
+    <completion string="check_markup">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$text}, ${2:\$format = FILTER_FORMAT_DEFAULT}, ${3:\$check = TRUE})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="check_plain">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$text})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>   
+    
+    <completion string="filter_access">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$format})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="filter_admin_format_title">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$format})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="filter_form">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$value= FILTER_FORMAT_DEFAULT}, ${2:\$weight = NULL}, ${3:\$parents = array('format')})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="filter_formats">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$index = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="filter_format_allowcache">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$format})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="filter_list_all">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="filter_list_format">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$format})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="filter_resolve_format">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$format})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="filter_xss">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$string}, ${2:\$allowed_tags = array('a', 'em', 'strong', 'cite', 'code', 'ul', 'ol', 'li', 'dl', 'dt', 'dd')})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="filter_xss_admin">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$string})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="filter_xss_bad_protocol">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$string}, ${2:\$decode = TRUE})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    
+    <!--  Format system  -->  
+    <completion string="format_date">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$timestamp}, ${2:\$type = 'medium'}, ${3:\$format = ''}, ${4:\timezone = NULL}, ${5:\langcode = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="format_interval">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$timestamp}, ${2:\$granularity = 2}, ${3:\$langcode = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="format_plural">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$count}, ${2:\$singular}, ${3:\$plural}, ${4:\$args = array()}, ${5:\$langcode = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="format_rss_channel">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$title}, ${2:\$link}, ${3:\$description}, ${4:\$items}, ${5:\$langcode = NULL}, ${6:\$args = array()})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="format_rss_item">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$title}, ${2:\$link}, ${3:\$description}, ${4:\$args = array()})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="format_size">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$size}, ${2:\$langcode = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="format_xml_elements">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$array})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    
+    <!--  Form system  -->    
+    <completion string="_form_button_was_clicked">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$form})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+         
+    <completion string="_form_set_class">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$element}, ${2:\$class = array()})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+      
+    <completion string="form_clean_id">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$id = NULL}, ${2:\$flush = FALSE})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="form_error">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$element}, ${2:\$flush = ''})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="form_get_errors">
+      <behavior>
+        <append-static>
+          <transform-into>()${0}</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="form_options_flatten">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$array}, ${2:\$reset = TRUE})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="form_select_options">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$element}, ${2:\$choices = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="form_set_cache">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$form_build_id}, ${2:\$form}, ${3:\$form_state})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="form_set_error">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$name = NULL}, ${2:\$message = ''}, ${3:\$reset = FALSE})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="form_set_value">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$form_item}, ${2:\$value}, ${3:&amp;\$form_state})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="system_settings_form">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$form})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="weight_value">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$form})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    
+    <!--  Forum system  -->    
+    <completion string="_forum_new">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$tid})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+           
+    <completion string="_forum_topics_unread">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$term}, ${2:\$uid})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="_forum_user_last_visit">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$nid})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="forum_get_forums">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$tid = 0})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="forum_get_topics">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$tid}, ${2:\$sortby}, ${3:\$forum_per_page})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="forum_overview">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$form_state})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="forum_page">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$tid = 0})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="forum_term_load">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$tid})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    
+    <!--  Image API  -->    
+    <completion string="image_crop">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$source}, ${2:\$destination}, ${3:\$x}, ${4:\$y}, ${5:\$width}, ${6:\$height})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="image_gd_check_settings">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion> 
+       
+    <completion string="image_gd_close">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$res}, ${2:\$destination}, ${3:\$extension})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="image_gd_crop">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$source}, ${2:\$destination}, ${3:\$x}, ${4:\$y}, ${5:\$width}, ${6:\$height})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="image_gd_info">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion> 
+       
+    <completion string="image_gd_open">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$file}, ${2:\$extension})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="image_gd_resize">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$source}, ${2:\$destination}, ${3:\$width}, ${4:\$height})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="image_gd_rotate">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$source}, ${2:\$destination}, ${3:\$degrees}, ${4:\$background = 0x000000})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="image_get_available_toolkits">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="image_get_info">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$file})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="image_get_toolkit">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion> 
+       
+    <completion string="image_resize">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$source}, ${2:\$destination}, ${3:\$width}, ${4:\$height})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="image_rotate">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$source}, ${2:\$destination}, ${3:\$degrees}, ${4:\$background = 0x000000})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="image_scale">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$source}, ${2:\$destination}, ${3:\$width}, ${4:\$height})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="image_scale_and_crop">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$source}, ${2:\$destination}, ${3:\$width}, ${4:\$height})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    
+    <!--  Language and locale API  -->    
+    <completion string="_locale_export_po">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$language = NULL}, ${2:\$output = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+      
+    <completion string="_locale_export_po_generate">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$language = NULL}, ${2:\$strings = array()}, ${3:\$header = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+      
+    <completion string="_locale_export_string">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$str})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+      
+    <completion string="_locale_get_predefined_list">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+      
+    <completion string="_locale_import_append_plural">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$entry}, ${2:\$key})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+      
+    <completion string="_locale_import_message">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$message}, ${2:\$file}, ${3:\$lineno = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="_locale_import_one_string">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$op}, ${2:\$value = NULL}, ${3:\$mode = LOCALE_IMPORT_KEEP|LOCALE_IMPORT_OVERWRITE}, ${4:\$lang = NULL}, ${5:\$file = NULL}, ${6:\$group = 'default'})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="_locale_import_one_string_db">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$report}, ${2:\$langcode}, ${3:\$source}, ${4:\$translation}, ${5:\$textgroup}, ${6:\$location}, ${7:\$mode = LOCALE_IMPORT_KEEP|LOCALE_IMPORT_OVERWRITE}, ${8:\$plid = NULL}, ${9:\$plural = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="_locale_import_parse_arithmetic">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$string})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="_locale_import_parse_header">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$header})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+      
+    <completion string="_locale_import_parse_plural_forms">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$pluralforms}, ${2:\$filename})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="_locale_import_parse_quoted">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$string})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="_locale_import_po">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$file}, ${2:\$langcode}, ${3:\$mode = LOCALE_IMPORT_KEEP|LOCALE_IMPORT_OVERWRITE}, ${4:\$group = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="_locale_import_read_po">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$op}, ${2:\$file}, ${3:\$mode = LOCALE_IMPORT_KEEP|LOCALE_IMPORT_OVERWRITE}, ${4:\$lang = NULL}, ${5:\group = 'default'})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="_locale_import_shorten_comments">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$comment})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="_locale_import_tokenize_formula">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$formula})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="_locale_rebuild_js">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$langcode = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+      
+    <completion string="get_t">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="language_default">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$property = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="language_from_browser">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="language_initialize">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion> 
+       
+    <completion string="language_list">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$field = 'language'}, ${2:\$reset = FALSE})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="language_url_rewrite">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$path}, ${2:&amp;\$options)</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="locale">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$string = NULL}, ${2:\$langcode = NULL}, ${3:\$reset = FALSE})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="locale_add_language">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$langcode}, ${2:\$name = NULL}, ${3:\$native = NULL}, ${4:\$direction = LANGUAGE_LTR|LANGUAGE_RTL}, ${5:\$domain = ''}, ${6:\$prefix = ''}, ${7:\$enabled = TRUE}, ${8:\$default = FALSE})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="locale_batch_by_language">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$langcode}, ${2:\$finished = NULL}, ${3:\$skip = array()})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="locale_get_plural">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$count}, ${2:\$langcode = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="locale_language_list">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$field = 'name'}, ${2:\$all = FALSE})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="locale_language_name">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$lang})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="locale_string_is_safe">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$string})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="locale_system_update">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$components})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="locale_update_js_files">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="st">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$string}, ${2:\$args = array()})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="t">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$string}, ${2:\$args = array()}, ${3:\$langcode = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    
+    <!--  Menu API  -->    
+    <completion string="_menu_check_access">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$item}), ${2:\$map}</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+     
+    <completion string="_menu_find_router_path">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$link_path})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+     
+    <completion string="_menu_link_build">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$item})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+     
+    <completion string="_menu_link_move_children">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$item}), ${2:\$existing_item}</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+     
+    <completion string="_menu_link_translate">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$item}</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+     
+    <completion string="_menu_parent_depth_limit">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$item}</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+     
+    <completion string="_menu_set_expanded_menus">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+     
+    <completion string="_menu_translate">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$router_item}), ${2:\$map}, ${3:\to_arg = FALSE}</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+     
+    <completion string="_menu_tree_cid">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$menu_name}), ${2:\$data}</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+     
+    <completion string="menu_cache_clear">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$menu_name = 'navigation'})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+     
+    <completion string="menu_cache_clear_all">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="menu_execute_active_handler">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$path = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+     
+    <completion string="menu_get_active_breadcrumb">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+     
+    <completion string="menu_get_active_help">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+     
+    <completion string="menu_get_active_menu_name">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+     
+    <completion string="menu_get_active_title">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+     
+    <completion string="menu_get_active_trail">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="menu_get_ancestors">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$parts})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="menu_get_item">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$path = NULL}, ${2:\$router_item = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="menu_get_menus">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$all = TRUE})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="menu_get_names">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$reset = FALSE})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="menu_get_object">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$type = node}, ${2:\$position = 1}, ${3:\$path = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="menu_link_children_relative_depth">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$item})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="menu_link_delete">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$mlid}, ${2:\$path = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="menu_link_load">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$mlid})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="menu_link_maintain">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$module}, ${2:\$op = 'insert|update|delete'}, ${3:\$link_path}, ${4:\$link_title})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>  
+       
+    <completion string="menu_link_save">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$item})</transform-into>
+        </append-static>
+      </behavior>
+    </completion> 
+       
+    <completion string="menu_list_system_menus">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion> 
+       
+    <completion string="menu_load">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$menu_name})</transform-into>
+        </append-static>
+      </behavior>
+    </completion> 
+       
+    <completion string="menu_local_tasks">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$level = 0}, ${2:\$return_root = FALSE})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="menu_navigation_links">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$menu_name}, ${2:\$level = 0})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="menu_parent_options">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$menus}, ${2:\$item})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="menu_path_is_external">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$path})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="menu_primary_links">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion> 
+       
+    <completion string="menu_primary_local_tasks">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion> 
+       
+    <completion string="menu_rebuild">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion> 
+       
+    <completion string="menu_reset_item">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$item})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="menu_router_build">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$reset = FALSE})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="menu_secondary_links">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion> 
+       
+    <completion string="menu_secondary_local_tasks">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion> 
+       
+    <completion string="menu_set_active_item">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$path})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="menu_set_active_menu_name">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$menu_name = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="menu_set_active_trail">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$new_trail = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="menu_set_item">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$path}, ${2:\$router_item})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="menu_tab_root_path">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion> 
+       
+    <completion string="menu_tail_to_arg">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$arg}, ${2:\$map}, ${3:\$index})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="menu_tree">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$menu_name = 'navigation'})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="menu_tree_all_data">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$menu_name = 'navigation'}, ${2:\$item = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="menu_tree_check_access">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$tree}, ${2:\$node_links = array()})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="menu_tree_collect_node_links">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$tree}, ${2:&amp;\$node_links})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="menu_tree_data">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$result = NULL}, ${2:\$parent = array()}, ${3:\$depth = 1})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="menu_tree_output">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$tree}})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="menu_tree_page_data">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$menu_name = 'navigation'})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="menu_unserialize">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$data}, ${2:\$map})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="menu_valid_path">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$form_item})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    
+    <!--  Module API  -->    
+    <completion string="module_disable">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$module_list})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>  
+    
+    <completion string="module_enable">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$module_list})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="module_exists">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$module})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="module_hook">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$module}, ${2:\$hook})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="module_implements">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$hook}, ${2:\$sort = FALSE}, ${3:\refresh = FALSE})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="module_invoke">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="module_invoke_all">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="module_iterate">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$function}, ${2:\$argument = ''})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="module_list">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$refresh FALSE}, ${2:\$bootstrap = TRUE}, ${3:\sort = FALSE}, ${4:\$fixed_list = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="module_load_all">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="module_load_all_includes">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$type}, ${2:\$name = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="module_load_include">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$type}, ${2:\$module}, ${3:\$name = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="module_load_install">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$module})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="module_rebuild_cache">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    
+    <!--  NodeA API  -->    
+    <completion string="_node_add_access">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+     
+    <completion string="_node_index_node">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$node})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+     
+    <completion string="_node_revision_access">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$node}, ${2:\$op = 'view'})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="node_access">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$op = 'view|update|delete|create'}, ${2:\$node}, ${3:\$account = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="node_access_acquire_grants">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$node})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="node_access_grants">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$op}, ${2:\$account = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="node_access_needs_rebuild">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$rebuild = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="node_access_rebuild">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$batch_mode = FALSE})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="node_access_view_all_nodes">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="node_access_write_grants">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$node}, ${2:\$grants}, ${3:\$realm = NULL}, ${4:\$delete = TRUE})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="node_assign_owner_action">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$node}, ${2:\$context})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="node_build_content">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$node}, ${2:\$teaser = FALSE}, ${3:\$page = FALSE})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="node_build_filter_query">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="node_comment_mode">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$nid})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="node_db_rewrite_sql">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$query}, ${2:\$primary_table}, ${3:\$primary_field})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="node_delete">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$nid})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="node_feed">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$nids = FALSE}, ${2:\$channel = array()})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="node_filters">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="node_get_types">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$op = 'types'}, ${2:\$node = NULL}, ${3:\$reset = FALSE})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="node_hook">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$node}, ${2:\$hook})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="node_invoke">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$node}, ${2:\$hook}, ${3:\$a2 = NULL}, ${4:\$a3 = NULL}, ${4:\$a3 = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="node_last_changed">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$nid})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="node_last_viewed">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$nid})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="node_link">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$type}, ${2:\$node = NULL}, ${3:\$teaser = FALSE})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="node_load">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$param = array()}, ${2:\$revision = NULL}, ${3:\$reset = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="node_make_sticky_action">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$node}, ${2:\$context = array()})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="node_make_unsticky_action">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$node}, ${2:\$context = array()})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="node_mark">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$nid}, ${2:\$timestamp})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="node_mass_update">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$nodes}, ${2:\$updates})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="node_object_prepare">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$node})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="node_prepare">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$node}, ${2:\$teaser = FALSE})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="node_preview">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$node})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="node_promote_action">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$node}, ${2:\$context = array()})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="node_publish_action">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$node}, ${2:\$context = array()})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="node_revision_list">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$node})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="node_save">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$node})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="node_save_action">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$node})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="node_tag_new">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$nid})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="node_teaser">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$body}, ${2:\$format = NULL}, ${:\$size = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="node_types_rebuild">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="node_type_delete">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$type})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="node_type_reset">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$type})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="node_type_save">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$info})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="node_type_update_nodes">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$old_type}, ${2:\$type})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="node_unpromote_action">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$node}, ${2:\$context = array()})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="node_unpublish_action">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$node}, ${2:\$context = array()})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="node_unpublish_by_keyword_action">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$node}, ${2:\$context = array()})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="node_view">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$node}, ${2:\$teaser = FALSE}, ${3:\$page = FALSE}, ${4:\$links = TRUE})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    
+    <!--  OpenID API  -->    
+    <completion string="openid_association">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$op_endpoint})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="openid_association_request">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$public})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="openid_authentication">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$response})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="openid_authentication_request">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$claimed_id}, ${2:\$identity}, ${3:\$return_to = ''}, ${4:\$assoc_handle = ''}, ${5:\$version = 2})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="openid_begin">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$claimed_id}, ${2:\$return_to = ''}, ${3:\$form_values = array()})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="openid_complete">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$response = array()})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="openid_discovery">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$claimed_id})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="openid_user_identities">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$account})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+       
+    <completion string="openid_verify_assertion">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$op_endpoint}, ${2:\$response})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    
+    <!--  Path System  -->
+    <completion string="arg">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$index}${2:, \$path = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="base_path">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="check_url">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:url})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>    
+    
+    <completion string="custom_url_rewrite_inbound">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$result}, ${2:\$path}, ${3:\$path_language})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="custom_url_rewrite_outbound">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$path}, ${2:&amp;\$options}, ${3:\$original_path})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="l">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$text}, ${2:\$path}, ${3:\$options = array()})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="path_admin_filter_get_keys">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="path_load">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:pid})</transform-into>
+        </append-static>
+      </behavior>
+    </completion> 
+    
+    <completion string="path_set_alias">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$path = NULL}, ${2:\$alias = NULL}, ${3:\$pid = NULL}, ${4:\$languge = ''})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="url">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:path = NULL}, ${2:\$array()})</transform-into>
+        </append-static>
+      </behavior>
+    </completion> 
+    
+    
+    <!--  Poll  -->    
+    <completion string="_poll_menu_access">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$node}, ${2:\$perm}, ${3:\$inspect_allowvotes})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="poll_view_results">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$node}, ${2:\$teaser}, ${3:\$page}, ${4:\$block})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    
+    <!--  Profile  -->   
+    <completion string="_profile_field_types">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$type = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    <completion string="_profile_get_fields">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$category}, ${2:\$register = FALSE})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+     
+    <completion string="profile_categories">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="profile_category_access">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$account}, ${2:\$category})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="profile_load_profile">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$user})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+        
+    <completion string="profile_save_profile">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$edit}, ${2:&amp;\$user}, ${3:\$category}, ${4:\$register = FALSE})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+        
+    <completion string="profile_view_field">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$user}, ${2:\$field})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="profile_view_profile">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$user})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    
+    <!--  Search API  -->    
+    <completion string="do_search">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$keywords}, ${2:\$type}, ${3:\$join1 = ''}, ${4:\$where1 = '1 = 1'}, ${5:\$arguments1 = array()}, ${6:\$columns2 = 'i.relevance AS score'}, ${7:\$join2 = ''}, ${8:\$arguments2 = array()}, ${9:\$sort_parameters = 'ORDER BY score DESC'})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="search_data">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$keys = NULL}, ${2:\$type = 'node'})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+        
+    <completion string="search_dirty">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$word = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+        
+    <completion string="search_excerpt">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$keys}, ${2:\$text})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+        
+    <completion string="search_expand_cjk">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$matches})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="search_get_keys">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+        
+    <completion string="search_index">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$sid}, ${2:\$type}, ${3:\$text})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+        
+    <completion string="search_index_split">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$text})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+        
+    <completion string="search_invoke_preprocess">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$text})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+        
+    <completion string="search_parse_query">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$text})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+        
+    <completion string="search_query_extract">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$key}, ${2:\$option})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+        
+    <completion string="search_query_insert">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$keys}, ${2:\$option}, ${3:\$value = ''})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+        
+    <completion string="search_simplify">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$text})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+        
+    <completion string="search_touch_node">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$nid})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+        
+    <completion string="search_touch_node">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+        
+    <completion string="search_query_insert">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$sid = NULL}, ${2:\$type = NULL}, ${3:\$reindex = FALSE})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    
+    <!--  Sessions  -->    
+    <completion string="session_save_session">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$status = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+     
+    <completion string="sess_close">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+        
+    <completion string="sess_count">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$timestamp = 0}, ${2:\$anoymous = TRUE})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+        
+    <completion string="sess_destroy_sid">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$sid})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+        
+    <completion string="sess_destroy_uid">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$uid})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+        
+    <completion string="sess_gc">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$lifetime})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+        
+    <completion string="sess_open">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$save_path}, ${2:\$session_name})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+        
+    <completion string="sess_read">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$key})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+        
+    <completion string="sess_regenerate">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+        
+    <completion string="sess_write">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$key}, ${2:\$value})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    
+    <!--  Statistics API  -->    
+    <completion string="statistics_get">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$nid})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+        
+    <completion string="statistics_title_list">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$dbfield}, ${2:\$dbrows})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    
+    <!--  System function  -->    
+    <completion string="system_admin_compact_mode">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+        
+    <completion string="system_check_directory">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$form_element})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+     
+    <completion string="system_check_http_request">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+     
+    <completion string="system_date_time_lookup">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+        
+    <completion string="system_default_region">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$theme})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+        
+    <completion string="system_find_base_theme">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$themes}, ${2:\$key}, ${3:\$used_keys()})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+        
+    <completion string="system_get_files_database">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$files}, ${2:\$type})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+        
+    <completion string="system_goto_action">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$object}, ${2:\$coontext = array()})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+        
+    <completion string="system_message_action">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$object}, ${2:\$coontext = array()})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+        
+    <completion string="system_region_list">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$theme_key})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+        
+    <completion string="system_send_email_action">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$object}, ${2:\$coontext = array()})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+        
+    <completion string="system_sort_modules_by_info_name">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$a}, ${2:\$b})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+        
+    <completion string="system_theme_data">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+        
+    
+    <!--  Tables   -->    
+    <completion string="tablesort_cell">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$cell}, ${2:\$header}, ${3:\$ts}, ${4:\$i})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+        
+    <completion string="tablesort_get_order">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$headers})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+        
+    <completion string="tablesort_get_querystring">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+        
+    <completion string="tablesort_get_sort">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$headers})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="tablesort_header">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$cell}, ${2:\$header}, ${3:\$ts})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+        
+    <completion string="tablesort_init">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$header})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+        
+    <completion string="tablesort_sql">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$header}, ${2:\$before = ''})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+        
+        
+    <!--  Taxonomy API  -->    
+    <completion string="_taxonomy_term_children">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$tid})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+     
+    <completion string="_taxonomy_term_select">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$title}, ${2:\$name}, ${3:\$value}, ${4:\$vocabulary_id}, ${5:\$description}, ${6:\$multiple}, ${7:\$blank}, ${8:\$exclude = array()})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+        
+    <completion string="taxonomy_autocomplete">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$vid}, ${2:\$string = ''})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="taxonomy_check_vocabulary_hierarchy">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$vocabulary}, ${2:\$changed_term})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+        
+    <completion string="taxonomy_del_term">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$tid})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+        
+    <completion string="taxonomy_del_vocabulary">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$vid})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="taxonomy_form">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$vid}, ${2:\$value = 0}, ${3:\$help = NULL}, ${4:\$name = 'taxonomy'})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+        
+    <completion string="taxonomy_form_all">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$free_tags = 0})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="taxonomy_get_children">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$tid}, ${2:\$vid = 0}, ${3:\$key = 'tid'})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="taxonomy_get_parents">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$tid}, ${2:\$key = 'tid'})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="taxonomy_get_parents_all">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$tid})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="taxonomy_get_related">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$tid}, ${2:\$key = 'tid'})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="taxonomy_get_synonyms">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$tid})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="taxonomy_get_synonym_root">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$synonym})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="taxonomy_get_term">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$tid})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="taxonomy_get_term_by_name">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$name})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="taxonomy_get_tree">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$vid}, ${2:\$parent = 0}, ${3:\$depth = -1}, ${4:\$max_depth = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="taxonomy_get_vocabularies">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$type = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="taxonomy_implode_tags">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$tags}, ${2:\$vid = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="taxonomy_link">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$type}, ${2:\$node = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="taxonomy_node_delete">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$node})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="taxonomy_node_delete_revision">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$node})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="taxonomy_node_get_terms">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$node}, ${2:\$key = 'tid'})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="taxonomy_node_get_terms_by_vocabulary">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$node}, ${2:\$vid}, ${3:\$key = 'tid'})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="taxonomy_save_term">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$form_values})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="taxonomy_save_vocabulary">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$edit})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="taxonomy_select_nodes">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$tids = array()}, ${2:\$operator = 'or'}, ${3:\$depth = 0}, ${4:\$pager = TRUE}, ${5:\$order = 'n.sticky DESC, n.created DESC'})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="taxonomy_terms_parse_string">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$str_tids})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="taxonomy_term_count_nodes">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$tid}, ${2:\$type = 0})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="taxonomy_vocabulary_load">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$vid})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+        
+        
+    <!--  Theme Layer  -->       
+    <completion string="_theme_build_registry">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$theme}, ${2:\$base_theme}, ${3:\$theme_engine})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+      
+    <completion string="_theme_load_offline_registry">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$theme}, ${2:\$base_theme = NULL}, ${3:\$theme_engine = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+      
+    <completion string="_theme_load_registry">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$theme}, ${2:\$base_theme = NULL}, ${3:\$theme_engine = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+      
+    <completion string="_theme_process_registry">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$cache}, ${2:\$name}, ${3:\$type}, ${4:\$theme}, ${5:\$path})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+      
+    <completion string="_theme_save_registry">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$theme}, ${2:\$registry})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+      
+    <completion string="_theme_set_registry">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$registry})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="list_themes">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$reset = FALSE})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="path_to_theme">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="theme">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$hook}, ${2:\$arg1, \$arg2, \$arg3, […]})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+        
+        
+    <!--  Translation API  -->    
+    <completion string="_translation_tab_access">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$node})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="translation_link">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$type}, ${2:\$node = NULL}, ${3:\$teaser = FALSE})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="translation_node_get_translations">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$tnid})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="translation_path_get_translations">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$path})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="translation_remove_from_set">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$node})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="translation_supported_type">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$type})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+        
+        
+    <!--  Trigger API  -->    
+    <completion string="_trigger_get_hook_actions">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$hook}, ${2:\$op}, ${3:\$type = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+        
+    <completion string="_trigger_get_hook_aids">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$hook}, ${2:\$op})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+        
+    <completion string="trigger_access_check">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$module})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+      
+    <completion string="trigger_actions_delete">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$aid})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+      
+    <completion string="trigger_options">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$type = 'all'})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+        
+        
+    <!--  Upload API  -->    
+    <completion string="_upload_file_limits">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$user})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>    
+     
+    <completion string="upload_delete">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$node})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>    
+    
+    <completion string="upload_delete_revision">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$node})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="upload_file_download">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$filepath})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="upload_load">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$node})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="upload_save">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$node})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="upload_space_used">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$uid})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+        
+        
+    <!--  User API  -->    
+    <completion string="user_access">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$string}, ${2:\$account = NULL}, ${3:\$reset = FALSE})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>    
+    
+    <completion string="user_autocomplete">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$string = ''})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="user_block_ip_action">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="user_block_user_action">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$object = ''}, ${2:\$context = array()})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="user_build_content">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$account})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="user_build_filter_query">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>  
+      
+    <completion string="user_category_load">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$uid}, ${2:&amp;\$map}, ${3:\$index})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>   
+      
+    <completion string="user_delete">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$edit}, ${2:\$uid})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>   
+      
+    <completion string="user_edit_access">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$account})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>    
+      
+    <completion string="user_external_load">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$authname})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>   
+      
+    <completion string="user_fields">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>     
+      
+    <completion string="user_get_authmaps">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$authname = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>  
+      
+    <completion string="user_is_anonymous">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>  
+      
+    <completion string="user_is_blocked">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$name})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>      
+      
+    <completion string="user_is_logged_in">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>   
+      
+    <completion string="user_load">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$array = array()})</transform-into>
+        </append-static>
+      </behavior>
+    </completion> 
+      
+    <completion string="user_load_self">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$arg})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>     
+      
+    <completion string="user_login_default_validators">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>    
+      
+    <completion string="user_logout">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>  
+      
+    <completion string="user_password">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$legth = 10})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>  
+      
+    <completion string="user_pass_rehash">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$password}, ${2:\$timestamp}, ${3:\$login})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>   
+      
+    <completion string="user_preferred_language">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$account}, ${2:\$default = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>  
+      
+    <completion string="user_register_access">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>   
+      
+    <completion string="user_roles">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$membersonly = FALSE}, ${2:\$permission = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>  
+      
+    <completion string="user_save">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$account}, ${2:\$array = array()}, ${3:\$category = 'account'})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>  
+      
+    <completion string="user_set_authmaps">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$account}, ${2:\$authmaps})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>  
+      
+    <completion string="user_uid_optional_load">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$arg})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>  
+      
+    <completion string="user_uid_optional_to_arg">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$arg})</transform-into>
+        </append-static>
+      </behavior>
+    </completion> 
+      
+    <completion string="user_validate_mail">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$mail})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>  
+      
+    <completion string="user_validate_name">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$name})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>  
+
+    <completion string="user_view_access">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$account})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>  
+        
+        
+    <!--  XMLRPC API  -->    
+    <completion string="xmlrpc">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$url})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="xmlrpc_base64">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$data})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>  
+    
+    <completion string="xmlrpc_base64_get_xml">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$xmlrpc_base64})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>  
+    
+    <completion string="xmlrpc_clear_error">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion> 
+    
+    <completion string="xmlrpc_date">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$time})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>   
+    
+    <completion string="xmlrpc_date_get_xml">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$xmlrpc_date})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>   
+    
+    <completion string="xmlrpc_errno">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion> 
+    
+    <completion string="xmlrpc_error">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$code = NULL}, ${2:\$message = NULL}, ${3:\$reset = FALSE})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>   
+    
+    <completion string="xmlrpc_error_get_xml">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$xmlrpc_error})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>  
+    
+    <completion string="xmlrpc_error_msg">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>  
+    
+    <completion string="xmlrpc_message">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$message})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>  
+    
+    <completion string="xmlrpc_message_cdata">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$parser}, ${2:\$cdata})</transform-into>
+        </append-static>
+      </behavior>
+    </completion> 
+    
+    <completion string="xmlrpc_message_get">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="xmlrpc_message_parse">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$xmlrpc_message})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>  
+    
+    <completion string="xmlrpc_message_set">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$value = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>  
+    
+    <completion string="xmlrpc_message_tag_close">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$parser}, ${2:\$tag})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="xmlrpc_message_tag_open">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$parser}, ${2:\$tag}, ${3:\$attr})</transform-into>
+        </append-static>
+      </behavior>
+    </completion> 
+    
+    <completion string="xmlrpc_request">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$method}, ${2:\$args})</transform-into>
+        </append-static>
+      </behavior>
+    </completion> 
+    
+    <completion string="xmlrpc_server">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$callbacks})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="xmlrpc_server_call">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$xmlrpc_server}, ${2:\$methodname}, ${3:\$args})</transform-into>
+        </append-static>
+      </behavior>
+    </completion> 
+    
+    <completion string="xmlrpc_server_error">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$error}, ${2:\$message = FALSE})</transform-into>
+        </append-static>
+      </behavior>
+    </completion> 
+    
+    <completion string="xmlrpc_server_get">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion> 
+    
+    <completion string="xmlrpc_server_get_capabilities">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion> 
+    
+    <completion string="xmlrpc_server_list_methods">
+      <behavior>
+        <append-static>
+          <transform-into>()</transform-into>
+        </append-static>
+      </behavior>
+    </completion> 
+    
+    <completion string="xmlrpc_server_method_help">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$method})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="xmlrpc_server_method_signature">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$methodname})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="xmlrpc_server_multicall">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$methodcalls})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="xmlrpc_server_output">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$xml})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="xmlrpc_server_set">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$xmlrpc_server = NULL})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="xmlrpc_value">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$data}, ${2:\$type = FALSE})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="xmlrpc_value_calculate_type">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:&amp;\$xmlrpc_value})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="xmlrpc_value_get_xml">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$xmlrpc_value})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+    
+    <completion string="xrds_parse">
+      <behavior>
+        <append-static>
+          <transform-into>(${1:\$xml})</transform-into>
+        </append-static>
+      </behavior>
+    </completion>
+  </set>
+</codesense>
